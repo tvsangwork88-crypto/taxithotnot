@@ -1,0 +1,668 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#087a35">
+<meta name="description" content="Taxi Thốt Nốt Cần Thơ — Dịch vụ taxi Thốt Nốt 24/7. Gọi ngay 0837 665 338 để đặt xe nhanh, an toàn và giá minh bạch.">
+  <meta name="keywords" content="Taxi Thốt Nốt, dịch vụ taxi Thốt Nốt, taxi Cần Thơ, đặt taxi Thốt Nốt">
+  <meta property="og:title" content="Taxi Thốt Nốt Cần Thơ — Dịch vụ taxi Thốt Nốt 24/7">
+  <meta property="og:description" content="Gọi Taxi Thốt Nốt Cần Thơ 24/7 — an toàn, nhanh chóng, giá rõ ràng. Hotline 0837 665 338.">
+  <meta property="og:image" content="assets/hero-banner.png">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="/">
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Taxi Dịch Vụ Thốt Nốt",
+    "url": "./",
+    "logo": "assets/logo.png",
+    "telephone": "0837665338",
+    "priceRange": "VND",
+    "description": "Dịch vụ Taxi Thốt Nốt tại Thốt Nốt & Cần Thơ — phục vụ 24/7, an toàn, nhanh chóng và uy tín.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Thốt Nốt",
+      "addressRegion": "Cần Thơ",
+      "addressCountry": "VN"
+    },
+    "areaServed": ["Thốt Nốt","Cần Thơ"],
+    "sameAs": ["https://www.facebook.com/profile.php?id=61594248864609"],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Dịch vụ Taxi",
+      "itemListElement": [
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Đưa đón bệnh viện"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Đội ngũ tài xế"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Taxi du lịch"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Đặt xe 24/7"}}
+      ]
+    }
+  }
+  </script>
+<title>Dịch vụ Taxi Thốt Nốt — Taxi Thốt Nốt Cần Thơ | 0837 665 338</title>
+ 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --green:#087a35;--green2:#0b963f;--dark:#064e28;--lime:#8ddd18;
+  --yellow:#ffe000;--blue:#1877f2;--red:#e53935;--ink:#153a24;
+  --muted:#65776b;--bg:#f5faf6;--white:#fff;--line:#e3eee6;
+  --shadow:0 10px 32px rgba(0,72,36,.10);--r:20px;--max:1180px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:74px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Inter',Arial,Helvetica,sans-serif;line-height:1.55}
+body.lock{overflow:hidden}
+img{display:block;max-width:100%}
+a{text-decoration:none;color:inherit}
+button{font:inherit}
+.container{width:min(calc(100% - 24px),var(--max));margin:auto}
+
+/* HEADER — exactly 5 body-id links */
+.site-header{
+  position:sticky;top:0;z-index:80;background:rgba(255,255,255,.94);
+  backdrop-filter:blur(14px);border-bottom:1px solid var(--line)
+}
+.nav{height:64px;display:flex;align-items:center;gap:8px}
+.brand{display:flex;align-items:center;gap:8px;min-width:0}
+.brand img{width:45px;height:45px;object-fit:contain;border-radius:50%;flex:0 0 45px}
+.brand-text{font-size:10px;font-weight:900;line-height:1.1;color:var(--green);white-space:nowrap}
+.navlinks{display:none}
+.header-call{margin-left:auto;background:var(--green);color:#fff;border-radius:999px;padding:9px 11px;font-size:12px;font-weight:900;white-space:nowrap}
+.menu-btn{width:40px;height:40px;border:0;border-radius:12px;background:#edf8ef;color:var(--green);font-size:22px;cursor:pointer}
+
+/* Skip link for keyboard users */
+.skip-link{position:absolute;left:12px;top:8px;background:#063d20;color:#fff;padding:8px 12px;border-radius:8px;z-index:200;transform:translateY(-140%);transition:transform .18s}
+.skip-link:focus{transform:translateY(0)}
+
+/* MOBILE DRAWER */
+.drawer{position:fixed;inset:0;z-index:120;background:rgba(0,35,16,.48);opacity:0;visibility:hidden;transition:.2s}
+.drawer.open{opacity:1;visibility:visible}
+.drawer-panel{position:absolute;right:0;top:0;height:100%;width:min(86%,360px);background:#fff;padding:20px;transform:translateX(100%);transition:.25s;box-shadow:-15px 0 40px rgba(0,0,0,.2)}
+.drawer.open .drawer-panel{transform:none}
+.drawer-close{float:right;width:42px;height:42px;border:0;border-radius:12px;background:#edf8ef;color:var(--green);font-size:24px}
+.drawer-title{clear:both;padding-top:18px;color:var(--green);font-size:20px;font-weight:1000}
+.drawer a{display:block;padding:14px 8px;border-bottom:1px solid var(--line);font-weight:900}
+.drawer .drawer-call{margin-top:18px;text-align:center;border:0;background:var(--yellow);border-radius:14px;color:#073e20}
+
+/* HERO */
+.hero{position:relative;overflow:hidden;background:#dff5e3;padding-top:0}
+.hero-bg{background:#f5faf6}
+.hero-content{padding:20px 0 8px;text-align:center}
+.kicker{display:inline-block;background:var(--yellow);padding:6px 11px;border-radius:999px;font-size:10px;font-weight:1000}
+h1{font-size:clamp(42px,12vw,72px);line-height:.91;letter-spacing:-2.5px;color:var(--dark);margin:13px 0 8px}
+h1 span{color:#59b915}
+.hero-copy{font-size:16px;font-weight:800;max-width:320px}
+.hero-actions{display:flex;flex-direction:column;gap:9px;max-width:520px;margin:17px auto 0}
+.btn{min-height:46px;border-radius:14px;display:flex;align-items:center;justify-content:center;padding:0 18px;font-weight:1000}
+.btn-call{background:var(--green);color:#fff;box-shadow:0 8px 20px rgba(8,122,53,.25)}
+.btn-fb{background:#1877f2;color:#fff;box-shadow:0 6px 18px rgba(24,119,242,.18)}
+.btn-fb:hover{background:#145ec0}
+.btn-fb:focus{outline:3px solid rgba(24,119,242,.16);outline-offset:3px}
+
+/* Button interactions */
+.btn:focus,.btn:hover{transform:translateY(-3px);transition:transform .14s}
+.btn:focus{outline:3px solid rgba(8,122,53,.12);outline-offset:4px}
+
+.hero-image{
+  width:100%;aspect-ratio:16/8.2;object-fit:cover;
+  border-radius:18px;box-shadow:0 10px 30px rgba(0,72,36,.12);
+  margin:0 0 16px;  
+}
+.hero-copy{max-width:560px}
+.hero-hotline{
+  position:absolute;left:12px;right:12px;bottom:12px;
+  background:var(--yellow);border:3px solid #fff;border-radius:18px;
+  padding:10px 13px;display:flex;align-items:center;justify-content:space-between;
+  box-shadow:var(--shadow);gap:8px
+}
+.hero-hotline small{display:block;font-size:9px;font-weight:900}
+.hero-hotline strong{font-size:25px;color:#063d20;letter-spacing:.5px}
+.hero-hotline b{font-size:11px;color:#063d20}
+
+/* SECTIONS */
+section{padding:28px 0}
+.section-head{text-align:center;margin-bottom:21px}
+.section-head h2{font-size:27px;line-height:1.1;color:var(--dark);margin:0 0 7px}
+.section-head p{font-size:13px;color:var(--muted);margin:0}
+.services{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.card{background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow)}
+.service{padding:17px 10px;text-align:center}
+.service:nth-child(5){grid-column:1/-1}
+.service-icon{width:48px;height:48px;margin:0 auto 9px;border-radius:50%;background:#e9f8d8;color:var(--green);display:grid;place-items:center;font-size:23px}
+.service h3{font-size:14px;line-height:1.2;margin:0 0 4px}
+.service p{font-size:11px;color:var(--muted);margin:0}
+
+
+.image-services{grid-template-columns:1fr}
+.image-service{padding:0;overflow:hidden;text-align:left}
+.image-service img{width:100%;aspect-ratio:16/8.6;object-fit:cover}
+.service-body{padding:13px 14px 15px}
+.service-body h3{font-size:16px;margin:0 0 4px}
+.service-body p{font-size:12px;color:var(--muted);margin:0}
+.service-call{padding:17px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:180px}
+.service-call .btn{width:100%;margin-top:12px}
+@media(min-width:760px){
+  .image-services{grid-template-columns:repeat(4,1fr)}
+  .image-services .service-call{grid-column:1/-1}
+}
+
+/* Mobile improvements for services */
+@media(max-width:759px){
+  .services{grid-template-columns:1fr;gap:12px}
+  .service{border-radius:14px;padding:0;overflow:hidden}
+  .image-service img{height:180px;object-fit:cover}
+  .service-body{padding:14px}
+  .service-body h3{font-size:18px;margin:0 0 6px}
+  .service-body p{font-size:14px;color:var(--muted);margin:0 0 8px}
+  .service-body ul{margin:8px 0 0;padding-left:18px}
+  .service-cta{display:block;width:100%;text-align:center;margin-top:12px;padding:12px;border-radius:12px;font-weight:900}
+}
+
+.service-cta{background:transparent;border:0;cursor:pointer}
+.service-cta.btn-call{background:var(--green);color:#fff}
+
+.feature-strip{background:var(--dark);color:#fff}
+.feature-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}
+.feature{padding:15px 8px;text-align:center;border:1px solid rgba(255,255,255,.13);background:rgba(255,255,255,.05);border-radius:15px}
+.feature-icon{font-size:24px}.feature strong{display:block;font-size:12px;margin-top:4px}.feature span{display:block;font-size:10px;color:#d2e9da;line-height:1.35}
+
+.fleet{display:grid;gap:12px}
+.fleet img{width:100%;height:170px;object-fit:cover;border-radius:18px 18px 0 0}
+.fleet-body{padding:14px}.fleet-body h3{margin:0 0 4px;font-size:17px}.fleet-body p{margin:0;color:var(--muted);font-size:13px}
+
+.posts{display:grid;gap:14px}
+.fb-post-wrap{background:#fff;border-radius:20px;padding:12px;box-shadow:var(--shadow);border:1px solid var(--line);overflow:hidden}
+.fb-post-title{font-weight:1000;color:#174ea6;font-size:17px;margin:0 0 10px}
+.fb-fallback{padding:18px;border-radius:15px;background:#f2f7ff;text-align:center;color:#27466d;font-size:13px}
+.fb-fallback a{display:inline-flex;margin-top:12px;background:var(--blue);color:#fff;padding:10px 15px;border-radius:10px;font-weight:900}
+
+.fanpage{
+  background:linear-gradient(135deg,#edf7ff,#fff);border:1px solid #dbe9f8;
+  border-radius:20px;padding:22px;text-align:center;box-shadow:var(--shadow)
+}
+.fan-icon{width:56px;height:56px;margin:0 auto 10px;border-radius:50%;background:var(--blue);color:#fff;display:grid;place-items:center;font-size:30px;font-weight:1000}
+.fanpage h3{margin:0;color:#154a95;font-size:20px}.fanpage p{color:var(--muted);font-size:13px;margin:7px auto 15px;max-width:600px}
+.fan-btn{display:inline-flex;align-items:center;justify-content:center;background:var(--blue);color:#fff;padding:11px 18px;border-radius:12px;font-weight:1000}
+
+.map-wrap{background:#fff;padding:8px;border-radius:20px;box-shadow:var(--shadow)}
+.map-wrap iframe{display:block;width:100%;height:330px;border:0;border-radius:15px}
+.map-info{padding:17px 5px 5px}.map-info h3{margin:0 0 5px;color:var(--dark)}.map-info p{margin:0;color:var(--muted);font-size:13px}
+.map-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:13px}
+.map-actions a{background:var(--green);color:#fff;padding:10px 13px;border-radius:10px;font-size:12px;font-weight:900}
+
+.contact{background:var(--yellow);border-radius:22px;padding:27px 15px;text-align:center}
+.contact h2{margin:0;color:#073e20;font-size:27px;line-height:1.1}.contact p{font-size:13px;margin:8px 0 13px}.contact .number{font-size:32px;font-weight:1000;color:var(--dark)}
+
+footer{background:#063d20;color:#d8ecdf;padding:32px 0 92px}.footer-grid{display:grid;gap:20px}.footer-title{color:#fff;font-weight:1000;font-size:17px}.footer-links{display:grid;gap:7px;font-size:13px}
+
+.float-actions{position:fixed;right:10px;bottom:calc(36px + env(safe-area-inset-bottom));z-index:95;display:flex;flex-direction:column;gap:12px}
+.float-group{display:flex;gap:10px;align-items:center}
+.float-action{
+  position:relative;width:52px;height:52px;border-radius:50%;display:grid;place-items:center;
+  color:#fff;font-weight:1000;font-size:24px;border:3px solid #fff;
+  box-shadow:0 8px 25px rgba(0,0,0,.22)
+}
+.float-action::before{content:"";position:absolute;inset:-7px;border-radius:50%;z-index:-1;filter:blur(8px);opacity:.9}
+
+/* Animated pulsing glow for call button and subtle float for FB */
+.float-call::before{background:radial-gradient(circle at 50% 40%, rgba(8,122,53,.28), rgba(8,122,53,0));animation:pulseGreen 2.6s infinite}
+.float-fb::before{background:radial-gradient(circle at 50% 40%, rgba(24,119,242,.22), rgba(24,119,242,0));animation:floatBlue 4s infinite}
+.float-book::before{background:radial-gradient(circle at 50% 40%, rgba(255,224,0,.22), rgba(255,224,0,0));animation:floatBlue 4.2s infinite}
+.float-msg::before{background:radial-gradient(circle at 50% 40%, rgba(11,150,63,.22), rgba(11,150,63,0));animation:pulseGreen 3s infinite}
+
+/* Ring / vibrate animation for call button and subtle bounce for FB */
+.float-call{animation:bellRing 4s ease-in-out infinite;transform-origin:50% 10%}
+.float-fb{animation:fbBounce 4.2s ease-in-out infinite}
+.float-book{animation:floatBlue 4.4s ease-in-out infinite}
+.float-msg{animation:fbBounce 4.4s ease-in-out infinite}
+
+@keyframes bellRing{
+  0%{transform:rotate(0)}
+  8%{transform:rotate(-18deg)}
+ 18%{transform:rotate(14deg)}
+ 28%{transform:rotate(-10deg)}
+ 38%{transform:rotate(8deg)}
+ 48%{transform:rotate(-4deg)}
+ 60%{transform:rotate(2deg)}
+ 100%{transform:rotate(0)}
+}
+
+@keyframes fbBounce{
+  0%{transform:translateY(0) scale(1)}
+  20%{transform:translateY(-8px) scale(1.03)}
+  40%{transform:translateY(0) scale(1)}
+  60%{transform:translateY(-4px) scale(1.02)}
+  100%{transform:translateY(0) scale(1)}
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce){
+  .float-call,.float-fb,.float-call::before,.float-fb::before{animation:none !important}
+}
+
+@keyframes pulseGreen{0%{transform:scale(.98);opacity:.65}50%{transform:scale(1.08);opacity:1}100%{transform:scale(.98);opacity:.65}}
+@keyframes floatBlue{0%{transform:translateY(0)}50%{transform:translateY(-6px)}100%{transform:translateY(0)}}
+
+/* Hover/focus interactions */
+.float-action:focus,.float-action:hover{transform:translateY(-6px) scale(1.06);transition:transform .18s}
+.float-action:focus{outline:3px solid rgba(255,255,255,.12);outline-offset:6px}
+.float-call{background:var(--green)}.float-fb{background:var(--blue)}
+.float-book{background:var(--yellow);color:#073e20}
+.float-msg{background:var(--green2)}
+.float-label{position:absolute;right:58px;white-space:nowrap;background:#fff;color:#17452b;border-radius:9px;padding:5px 8px;font-size:10px;box-shadow:0 5px 16px rgba(0,0,0,.12)}
+
+/* Ensure hotline panel appears above floating buttons */
+.hero-hotline{z-index:200}
+
+/* Quick badges and mobile-first ordering */
+.trust-strip{display:block}
+.hero-quick{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:6px}
+.hero-quick .badge{background:#fff;padding:8px 12px;border-radius:999px;font-weight:800;color:var(--green);font-size:13px}
+
+@media(max-width:759px){
+  /* make CTAs more prominent */
+  .hero-actions{padding:0 12px}
+  .hero-actions .btn{width:100%;min-height:56px;font-size:16px;max-width:100%}
+  h1{font-size:36px}
+  .hero-image{order:3}
+  .hero-actions{order:1}
+  .kicker{order:2}
+  .hero-copy{order:4}
+  .trust-strip{padding-top:6px;padding-bottom:6px}
+  /* lower floating actions closer to bottom nav on mobile */
+  .float-actions{bottom:calc(36px + env(safe-area-inset-bottom));right:12px}
+}
+
+/* Transition for float-actions and hidden state used on small screens */
+.float-actions{transition:opacity .18s, transform .18s}
+.float-actions.hidden{opacity:0;pointer-events:none;transform:translateY(12px)}
+
+.bottom-bar{
+  position:fixed;left:12px;right:12px;bottom:12px;z-index:140;background:linear-gradient(180deg,var(--green2),var(--green));
+  padding:10px;border-radius:14px;box-shadow:0 12px 40px rgba(3,44,22,.22);display:flex;align-items:center;justify-content:space-between;gap:12px;max-width:980px;margin:auto;
+  transform:translateY(28px);opacity:0;animation:slideUp .36s cubic-bezier(.2,.9,.2,1) .05s forwards
+}
+.bottom-bar .hotline-left{display:flex;align-items:center;gap:12px;color:#fff}
+.bottom-bar .hotline-left .icon{width:44px;height:44px;border-radius:10px;background:rgba(255,255,255,.08);display:grid;place-items:center;font-weight:900}
+.bottom-bar .hotline-left .text{line-height:1}
+.bottom-bar .hotline-left .small{font-size:12px;opacity:.95}
+.bottom-bar .hotline-left .num{font-size:16px;font-weight:900}
+.bottom-bar .call-btn{background:var(--yellow);color:var(--light);padding:10px 16px;border-radius:12px;font-weight:900;box-shadow:0 8px 28px rgba(187, 175, 175, 0.12);text-decoration:white}
+.bottom-bar .call-btn:active{transform:translateY(1px)}
+.bottom-bar .call-btn:hover{transform:scale(1.02)}
+@keyframes slideUp{to{transform:translateY(0);opacity:1}}
+@media(max-width:520px){
+  .bottom-bar{left:8px;right:8px;bottom:8px;padding:8px}
+  .bottom-bar{flex-direction:row;gap:10px}
+  .bottom-bar .hotline-left .small{font-size:11px}
+  .bottom-bar .hotline-left .num{font-size:14px}
+  .bottom-bar .call-btn{padding:10px 12px}
+}
+
+@media(min-width:760px){
+  .container{width:min(calc(100% - 44px),var(--max))}
+  .nav{height:78px}
+  .brand img{width:55px;height:55px;flex-basis:55px}.brand-text{font-size:12px}
+  .header-call{font-size:13px;padding:10px 15px}.menu-btn{display:none}
+  .navlinks{display:flex;align-items:center;gap:20px;margin-left:auto;font-size:13px;font-weight:900}
+  .navlinks a{padding:10px 2px}
+  .hero-content{padding:26px 0 18px}.hero-image{aspect-ratio:16/6.2}.hero-actions{flex-direction:row;max-width:560px}
+  
+.hero-image{
+  width:100%;aspect-ratio:16/8.2;object-fit:cover;
+  border-radius:18px;box-shadow:0 10px 30px rgba(0,72,36,.12);
+  margin:0 0 8px;
+}
+.hero-copy{max-width:560px}
+.hero-hotline{left:auto;right:max(22px,calc((100% - var(--max))/2));width:420px}
+  .services{grid-template-columns:repeat(5,1fr)}.service:nth-child(5){grid-column:auto}
+  .feature-grid{grid-template-columns:repeat(4,1fr)}.fleet{grid-template-columns:repeat(3,1fr)}
+  .posts{grid-template-columns:1.35fr .65fr}.footer-grid{grid-template-columns:2fr 1fr 1fr}
+  .bottom-bar{display:flex}.float-actions{right:24px;bottom:30px}
+}
+</style>
+
+<style>
+/* Extra responsive and focus styles */
+@media(max-width:759px){
+  .menu-btn{width:48px;height:48px;border-radius:12px}
+  .hero-hotline{left:12px;right:12px;padding:12px}
+  .float-actions{bottom:80px;right:12px}
+  .float-label{display:none}
+  .hero-hotline{width:calc(100% - 36px);box-sizing:border-box}
+}
+
+/* Focus-visible for keyboard users */
+:focus{outline:none}
+.focus-visible:focus{outline:3px solid rgba(8,122,53,.22);outline-offset:3px}
+</style>
+</head>
+
+<body>
+
+  <a class="skip-link" href="#main">Bỏ qua đến nội dung</a>
+
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="#trang-chu" aria-label="Taxi Thốt Nốt Cần Thơ">
+      <img src="assets/logo.png" alt="Taxi Dịch Vụ Thốt Nốt">
+      <span class="brand-text">TAXI DỊCH VỤ<br>THỐT NỐT – CẦN THƠ</span>
+    </a>
+
+    <!-- ĐÚNG 5 LINK HEADER, TẤT CẢ TRỎ TỚI BODY ID. Assets: logo.png + hero-banner.png + 4 ảnh dịch vụ. -->
+    <nav class="navlinks" aria-label="Điều hướng chính">
+      <a href="#trang-chu">Trang chủ</a>
+      <a href="#dich-vu">Dịch vụ</a>
+      <a href="#bai-viet">Bài viết</a>
+      <a href="#khu-vuc">Khu vực</a>
+      <a href="#lien-he">Liên hệ</a>
+    </nav>
+
+    <a class="header-call" href="tel:0837665338">☎ 0837 665 338</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Mở menu" aria-expanded="false">☰</button>
+  </div>
+</header>
+
+<!-- Trust strip (mobile-first) -->
+<div class="trust-strip container" aria-hidden="false">
+  <div style="display:flex;gap:10px;align-items:center;justify-content:center;padding:8px 6px">
+    <div style="background:#fff;padding:6px 10px;border-radius:999px;font-weight:800;font-size:13px;color:#064e28">🟢24/7</div>
+    <div style="background:#fff;padding:6px 10px;border-radius:999px;font-weight:800;font-size:13px;color:#064e28">Tài xế chuyên nghiệp</div>
+    <div style="background:#fff;padding:6px 10px;border-radius:999px;font-weight:800;font-size:13px;color:#064e28">Xe sạch & an toàn</div>
+  </div>
+</div>
+
+<div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="drawer-panel" tabindex="-1">
+    <button class="drawer-close" id="drawerClose" aria-label="Đóng menu">×</button>
+    <div class="drawer-title">TAXI THỐT NỐT<br>CẦN THƠ</div>
+    <a href="#trang-chu">🏠 Trang chủ</a>
+    <a href="#dich-vu">🚕 Dịch vụ</a>
+    <a href="#bai-viet">📰 Bài viết</a>
+    <a href="#khu-vuc">📍 Khu vực</a>
+    <a href="#lien-he">☎ Liên hệ</a>
+    <a class="drawer-call" href="tel:0837665338">📞 GỌI XE NGAY — 0837 665 338</a>
+  </div>
+</div>
+
+<main id="main">
+
+<section id="trang-chu" class="hero">
+  <div class="hero-bg">
+    <div class="container hero-content">
+      <img class="hero-image" src="assets/hero-banner.png" alt="Taxi Thốt Nốt Cần Thơ - dịch vụ taxi 24/7" fetchpriority="high">
+      <span class="kicker">TAXI • THỐT NỐT • CẦN THƠ</span>
+      <h1>Dịch vụ Taxi <span>Thốt Nốt</span> — Taxi Thốt Nốt Cần Thơ</h1>
+      <div class="hero-copy">Dịch vụ taxi Thốt Nốt tại Cần Thơ — phục vụ 24/7, an toàn và nhanh chóng.<br>Tận tâm phục vụ mọi hành trình.</div>
+      <div class="hero-actions">
+        <a class="btn btn-call" href="tel:0837665338">📞 GỌI XE NGAY</a>
+        <a class="btn btn-fb" href="https://www.facebook.com/profile.php?id=61594248864609" target="_blank" rel="noopener">f&nbsp;&nbsp; FANPAGE</a>
+      </div>
+      <div class="hero-quick" aria-hidden="true">
+        <div class="badge">Gọi 24/7</div>
+        <div class="badge">Giá minh bạch</div>
+        <div class="badge">Hỗ trợ tận tâm</div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+<section id="dich-vu">
+  <div class="container">
+    <div class="section-head">
+      <h2>Dịch vụ Taxi Thốt Nốt (Cần Thơ)</h2>
+      <p>Những dịch vụ taxi của Taxi Thốt Nốt — đặt xe, đưa đón, du lịch, phục vụ 24/7 tại Thốt Nốt và Cần Thơ.</p>
+    </div>
+    <div class="services image-services">
+      <article class="card service image-service">
+        <img src="assets/benhvien.jpg" alt="Taxi Thốt Nốt đưa đón bệnh viện" loading="lazy">
+        <div class="service-body"><h3>Đưa đón bệnh viện</h3>
+          <p>Hỗ trợ đưa đón bệnh nhân và người nhà an toàn, tận tâm. Tài xế giúp lên/xuống xe, chở theo hành lý y tế và ưu tiên lộ trình nhanh, ít xóc. Phù hợp đi khám bệnh, tái khám hoặc chuyển viện.</p>
+          <ul>
+            <li>Đón tận nơi, đưa đúng giờ</li>
+            <li>Hỗ trợ người lớn tuổi và hành lý y tế</li>
+            <li>Đặt trước hoặc gọi nhanh 24/7</li>
+          </ul>
+          <a class="btn btn-call service-cta" href="tel:0837665338">📞 Đặt xe</a>
+        </div>
+      </article>
+      <article class="card service image-service">
+        <img src="assets/doingu.jpg" alt="Đội ngũ Taxi Thốt Nốt" loading="lazy">
+        <div class="service-body"><h3>Đội ngũ tài xế</h3>
+          <p>Tài xế được tuyển chọn, đào tạo bài bản, am hiểu địa phương và luôn tuân thủ quy tắc an toàn. Thái độ thân thiện, đúng giờ và sẵn sàng hỗ trợ khách hàng trong suốt hành trình.</p>
+          <a class="btn btn-call service-cta" href="tel:0837665338">📞 Đặt xe</a>
+        </div>
+      </article>
+      <article class="card service image-service">
+        <img src="assets/donghanh.jpg" alt="Taxi Thốt Nốt đồng hành" loading="lazy">
+        <div class="service-body"><h3>Đồng hành mọi hành trình</h3>
+          <p>Phục vụ linh hoạt: nội ô, liên tỉnh, đưa đón theo giờ, đón sân bay, hoặc phục vụ sự kiện. Chúng tôi điều phối xe phù hợp theo nhu cầu và hành trình của bạn với giá cả minh bạch.</p>
+          <a class="btn btn-call service-cta" href="tel:0837665338">📞 Đặt xe</a>
+        </div>
+      </article>
+      <article class="card service image-service">
+        <img src="assets/dulich.jpg" alt="Taxi Thốt Nốt phục vụ du lịch" loading="lazy">
+        <div class="service-body"><h3>Taxi du lịch</h3>
+          <p>Dịch vụ tham quan, đưa đón du lịch cho gia đình và nhóm nhỏ. Xe sạch thoáng, tài xế nhiệt tình, có thể hỗ trợ gợi ý lộ trình và điểm đến an toàn, thoải mái.</p>
+          <p style="margin-top:6px;font-size:13px;color:var(--muted)">Hỗ trợ ghế trẻ em và lưu ý lịch trình theo yêu cầu.</p>
+          <a class="btn btn-call service-cta" href="tel:0837665338">📞 Đặt xe</a>
+        </div>
+      </article>
+      <article class="card service service-call">
+        <div class="service-icon">☎</div><h3>Đặt xe 24/7</h3><p>Gọi ngay 0837 665 338 để được hỗ trợ.</p>
+        <a class="btn btn-call" href="tel:0837665338">GỌI XE NGAY</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="feature-strip">
+  <div class="container">
+    <div class="section-head">
+      <h2 style="color:#fff">An tâm trên mọi hành trình</h2>
+      <p style="color:#cfe8d7">Những điều khách hàng quan tâm khi đặt taxi</p>
+    </div>
+    <div class="feature-grid">
+      <div class="feature"><div class="feature-icon">✓</div><strong>AN TOÀN</strong><span>Phục vụ chu đáo</span></div>
+      <div class="feature"><div class="feature-icon">◷</div><strong>NHANH CHÓNG</strong><span>Tiếp nhận nhanh</span></div>
+      <div class="feature"><div class="feature-icon">👥</div><strong>PHỤC VỤ 24/7</strong><span>Sẵn sàng mọi lúc</span></div>
+      <div class="feature"><div class="feature-icon">₫</div><strong>GIÁ HỢP LÝ</strong><span>Trao đổi rõ ràng</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="bai-viet">
+  <div class="container">
+    <div class="section-head">
+      <h2>Tin tức & hoạt động</h2>
+      <p>Cập nhật thông tin mới từ Taxi Thốt Nốt</p>
+    </div>
+
+    <div class="posts">
+      <article class="fb-post-wrap">
+        <h3 class="fb-post-title">Bài viết mới trên Facebook</h3>
+
+        <!-- Facebook post embed -->
+        <div id="fb-post">
+          <blockquote
+            class="fb-post"
+            data-href="https://www.facebook.com/permalink.php?story_fbid=122095449207474962&id=61594248864609&ref=embed_post"
+            data-width="auto"
+            data-show-text="true">
+          </blockquote>
+        </div>
+
+        <!-- Fallback nếu Facebook không tải script/iframe -->
+        <div class="fb-fallback">
+          Không tải được bài viết trực tiếp? Bạn có thể mở bài viết trên Facebook.
+          <br>
+          <a href="https://www.facebook.com/permalink.php?story_fbid=122095449207474962&id=61594248864609&ref=embed_post"
+             target="_blank" rel="noopener">Xem bài viết Facebook →</a>
+        </div>
+      </article>
+
+      <aside class="fanpage">
+        <div class="fan-icon">f</div>
+        <h3>Theo dõi Fanpage</h3>
+        <p>Theo dõi Fanpage để xem hình ảnh hoạt động, thông tin dịch vụ và các cập nhật mới của Taxi Thốt Nốt.</p>
+        <a class="fan-btn" href="https://www.facebook.com/profile.php?id=61594248864609" target="_blank" rel="noopener">XEM FANPAGE →</a>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section id="khu-vuc">
+  <div class="container">
+    <div class="section-head">
+      <h2>Khu vực phục vụ</h2>
+      <p>Thốt Nốt – Cần Thơ và các tuyến đi tỉnh</p>
+    </div>
+
+    <div class="map-wrap">
+      <iframe
+        title="Bản đồ Thốt Nốt Cần Thơ"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps?q=Th%E1%BB%91t%20N%E1%BB%91t%2C%20C%E1%BA%A7n%20Th%C6%A1&output=embed">
+      </iframe>
+      <div class="map-info">
+        <h3>📍 Taxi Thốt Nốt – Cần Thơ</h3>
+        <p>Liên hệ hotline để xác nhận điểm đón và thời gian phục vụ.</p>
+        <div class="map-actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=Th%E1%BB%91t%20N%E1%BB%91t%2C%20C%E1%BA%A7n%20Th%C6%A1" target="_blank" rel="noopener">MỞ GOOGLE MAPS</a>
+          <a href="tel:0837665338">GỌI ĐẶT XE</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="lien-he">
+  <div class="container">
+    <div class="contact">
+      <h2>Cần taxi? Gọi ngay!</h2>
+      <p>Phục vụ 24/7 tại Thốt Nốt và Cần Thơ.</p>
+      <div class="number">0837 665 338</div>
+      <div class="hero-actions" style="max-width:520px;margin:16px auto 0">
+        <a class="btn btn-call" href="tel:0837665338">📞 GỌI TAXI</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container footer-grid">
+    <div>
+      <div class="footer-title">TAXI DỊCH VỤ THỐT NỐT</div>
+      <p>An toàn • Nhanh chóng • Uy tín<br>Phục vụ 24/7.</p>
+    </div>
+    <div>
+      <div class="footer-title">Điều hướng</div>
+      <div class="footer-links">
+        <a href="#trang-chu">Trang chủ</a><a href="#dich-vu">Dịch vụ</a><a href="#bai-viet">Bài viết</a><a href="#khu-vuc">Khu vực</a><a href="#lien-he">Liên hệ</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-title">Liên hệ</div>
+      <div class="footer-links">
+        <a href="tel:0837665338">0837 665 338</a>
+        <span>Thốt Nốt, Cần Thơ</span>
+        <!-- Facebook Fanpage link removed -->
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating Call + Facebook with blurred glow -->
+<div class="float-actions">
+  <a class="float-action float-call" href="tel:0837665338" aria-label="Gọi taxi"><span class="float-label">Gọi taxi</span>☎</a>
+  <a class="float-action float-fb" href="https://www.facebook.com/profile.php?id=61594248864609" target="_blank" rel="noopener" aria-label="Facebook"><span class="float-label">Facebook</span>f</a>
+</div>
+
+<!-- Sticky mobile CTA (swapped: Fanpage first, then Call) -->
+<div class="bottom-bar" role="region" aria-label="Gọi taxi 24/7">
+  <div class="hotline-left">
+    <div class="icon">☎</div>
+    <div class="text">
+      <div class="small">GỌI TAXI 24/7</div>
+      <div class="num">0837 665 338</div>
+    </div>
+  </div>
+  <a class="call-btn" href="tel:0837665338">GỌI NGAY</a>
+</div>
+
+<script async defer crossorigin="anonymous"
+  src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v24.0"></script>
+
+<script>
+(function(){
+  const drawer = document.getElementById('drawer');
+  const panel = drawer.querySelector('.drawer-panel');
+  const openBtn = document.getElementById('menuBtn');
+  const closeBtn = document.getElementById('drawerClose');
+
+  function openDrawer(){
+    drawer.classList.add('open');
+    document.body.classList.add('lock');
+    drawer.setAttribute('aria-hidden','false');
+    openBtn.setAttribute('aria-expanded','true');
+    // focus the panel for keyboard users
+    panel.focus();
+  }
+
+  function closeDrawer(){
+    drawer.classList.remove('open');
+    document.body.classList.remove('lock');
+    drawer.setAttribute('aria-hidden','true');
+    openBtn.setAttribute('aria-expanded','false');
+    openBtn.focus();
+  }
+
+  openBtn.addEventListener('click', ()=>{
+    const expanded = openBtn.getAttribute('aria-expanded') === 'true';
+    if(expanded) closeDrawer(); else openDrawer();
+  });
+
+  closeBtn.addEventListener('click', closeDrawer);
+
+  // clicking overlay closes
+  drawer.addEventListener('click', e => { if(e.target === drawer) closeDrawer(); });
+
+  // close when any link inside panel is clicked
+  panel.querySelectorAll('a').forEach(a=>a.addEventListener('click', closeDrawer));
+
+  // close on Escape
+  document.addEventListener('keydown', e => { if(e.key === 'Escape' && drawer.classList.contains('open')) closeDrawer(); });
+
+  // Automatically hide floating buttons while hotline is visible to avoid overlap on small screens
+  try{
+    const floatActions = document.querySelector('.float-actions');
+    const heroHotline = document.querySelector('.hero-hotline');
+    if(floatActions && heroHotline && 'IntersectionObserver' in window){
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if(entry.isIntersecting){
+            floatActions.classList.add('hidden');
+          } else {
+            floatActions.classList.remove('hidden');
+          }
+        });
+      }, {threshold: 0.6});
+      observer.observe(heroHotline);
+      // also run once to set initial state
+      // (if heroHotline currently in view it will be handled by observer quickly)
+    }
+  }catch(e){console.error(e)}
+})();
+</script>
+</body>
+</html>
