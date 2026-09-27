@@ -329,7 +329,71 @@ footer{background:#063d20;color:#d8ecdf;padding:32px 0 92px}.footer-grid{display
 .focus-visible:focus{outline:3px solid rgba(8,122,53,.22);outline-offset:3px}
 </style>
 </head>
+<script>
+(function () {
 
+    const params = new URLSearchParams(window.location.search);
+
+    // Chỉ tracking khi URL có GCLID từ Google Ads
+    const gclid = params.get("gclid");
+
+    if (!gclid) {
+        return;
+    }
+
+    const GOOGLE_SCRIPT_URL =
+        "https://script.google.com/macros/s/AKfycbyaWhV_7DCjZKlFd-gCpjn5Tim4IYmOYQpoyIoeIMXQlfooAIov-ABr51g1qKmnGKOuIg/exec";
+
+    // Thiết bị
+    const device =
+        /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent)
+            ? "Mobile"
+            : "Desktop";
+
+    // Trình duyệt
+    let browser = "Unknown";
+
+    if (/Edg/i.test(navigator.userAgent)) {
+        browser = "Edge";
+    } else if (/Chrome/i.test(navigator.userAgent)) {
+        browser = "Chrome";
+    } else if (/Firefox/i.test(navigator.userAgent)) {
+        browser = "Firefox";
+    } else if (/Safari/i.test(navigator.userAgent)) {
+        browser = "Safari";
+    }
+
+    // Lấy IP
+    fetch("https://api.ipify.org?format=json")
+        .then(response => response.json())
+        .then(ipData => {
+
+            const data = {
+                event: "GOOGLE_ADS_VISIT",
+                ip: ipData.ip,
+                device: device,
+                browser: browser,
+                page: window.location.pathname,
+                referrer: document.referrer,
+                gclid: gclid
+            };
+
+            fetch(GOOGLE_SCRIPT_URL, {
+                method: "POST",
+                mode: "no-cors",
+                headers: {
+                    "Content-Type": "text/plain;charset=utf-8"
+                },
+                body: JSON.stringify(data)
+            });
+
+        })
+        .catch(error => {
+            console.error("Tracking error:", error);
+        });
+
+})();
+</script>
 <body>
 
   <a class="skip-link" href="#main">Bỏ qua đến nội dung</a>
